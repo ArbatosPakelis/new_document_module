@@ -1,0 +1,33 @@
+<odoo>
+    <!-- Wizard Form View -->
+    <record id="view_document_filter_wizard_form" model="ir.ui.view">
+        <field name="name">document.filter.wizard.form</field>
+        <field name="model">document.filter.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Filter Documents">
+                <group>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="employee_id"/>
+                </group>
+                <footer>
+                    <button string="Filter" type="object" name="filter_documents" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Action -->
+    <record id="action_document_filter_wizard" model="ir.actions.act_window">
+        <field name="name">Filter Documents</field>
+        <field name="res_model">document.filter.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="main_root_menu" name="New module"/>
+    <menuitem id="menu_document_filter_wizard" name="Filter Documents" parent="main_root_menu" action="action_document_filter_wizard"/>
+
+</odoo>

@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_new_document_module_new_document_module,new_document_module.new_document_module,model_new_document_module_new_document_module,base.group_user,1,1,1,1
+access_new_document_module_document,new_document_module.document,model_new_document_module_document,,1,1,1,1
+access_new_document_module_employee,new_document_module.employee,model_new_document_module_employee,,1,1,1,1
+access_document_filter_wizard,access_document_filter_wizard,model_document_filter_wizard,,1,1,1,1
